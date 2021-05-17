@@ -1,0 +1,44 @@
+.sectionVideo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  margin-top: 5rem;
+
+  h1 {
+    padding: 0 2rem;
+    font-size: 3rem;
+    text-align: center;
+    color: var(--blue-600);
+  }
+}
+
+.videoOnCellPhone {
+  display: none;
+  margin-top: 3rem;
+  position: relative;
+  padding-bottom: 56.25%;
+  width: 90%;
+  height: 0;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media(max-width: 1024px) {
+    display: block;
+  }
+}
+
+.videoOnComputer {
+  margin-top: 3rem;
+
+  @media(max-width: 1024px) {
+    display: none;
+  }
+}
