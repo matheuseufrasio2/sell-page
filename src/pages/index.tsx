@@ -1,7 +1,9 @@
 import Head from 'next/head';
 import { Footer } from '../components/Footer';
 import { SectionAboutMe } from '../components/SectionAboutMe';
+import { SectionFaq } from '../components/SectionFaq';
 import { SectionHowItWorks } from '../components/SectionHowItWorks';
+import { SectionSell } from '../components/SectionSell';
 import styles from '../styles/pages/home.module.scss';
 
 export default function Home() {
@@ -34,9 +36,15 @@ export default function Home() {
           allowFullScreen
         />
       </div>
+      <a
+        href="https://sun.eduzz.com/779754?&utm_source=JOBZZ&utm_medium=Organico&utm_campaign=Link_Checkout"
+        target="_blank"
+      >Quero assinar o plano</a>
     </section>
     <SectionAboutMe />
     <SectionHowItWorks />
+    <SectionSell />
+    <SectionFaq />
     <Footer />
     </main>
   )

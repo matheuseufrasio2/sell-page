@@ -7,7 +7,7 @@ export function Footer() {
     <footer className={styles.footerContainer}>
       <h1>Larissa Silberman</h1>
       <div className={styles.socialMedias} >
-        <a href="#">
+        <a target="_blank" href="https://www.instagram.com/larisilberman/">
           <RiInstagramLine />
         </a>
         <a href="#">
