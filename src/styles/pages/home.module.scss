@@ -1,8 +1,16 @@
+.homeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
 .sectionVideo {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  max-width: 1240px;
 
   margin-top: 5rem;
 
@@ -11,6 +19,10 @@
     font-size: 3rem;
     text-align: center;
     color: var(--blue-600);
+
+    @media(max-width: 768px) {
+      font-size: 2rem;
+    }
   }
 }
 

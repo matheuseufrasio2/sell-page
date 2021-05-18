@@ -1,9 +1,12 @@
 import Head from 'next/head';
+import { Footer } from '../components/Footer';
+import { SectionAboutMe } from '../components/SectionAboutMe';
+import { SectionHowItWorks } from '../components/SectionHowItWorks';
 import styles from '../styles/pages/home.module.scss';
 
 export default function Home() {
   return (
-    <>
+    <main className={styles.homeContainer}>
     <Head>
       <title>Social Media Pocket</title>
     </Head>
@@ -32,6 +35,9 @@ export default function Home() {
         />
       </div>
     </section>
-    </>
+    <SectionAboutMe />
+    <SectionHowItWorks />
+    <Footer />
+    </main>
   )
 }

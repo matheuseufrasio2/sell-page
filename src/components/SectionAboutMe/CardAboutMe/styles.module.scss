@@ -1,4 +1,30 @@
 .cardContainer {
-  min-height: 30rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.cardTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue-600);
+
+  > h2 {
+    margin-left: 0.75rem;
+    text-transform: uppercase;
+    color: var(--blue-600);
+  }
+}
+
+.cardContent {
+  min-height: 10rem;
   background: var(--blue-600);
+
+  width: 22rem;
+  height: 22rem;
+  border-radius: 5px;
+  margin-top: 1rem;
 }
