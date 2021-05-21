@@ -8,6 +8,11 @@ import { SectionSell } from '../components/SectionSell';
 import styles from '../styles/pages/home.module.scss';
 
 export default function Home() {
+  function scrollToSectionSell() {
+    var element = document.getElementById("compre-aqui");
+    element.scrollIntoView({ behavior: 'smooth' });
+  }
+
   return (
     <main className={styles.homeContainer}>
     <Head>
@@ -15,9 +20,9 @@ export default function Home() {
     </Head>
     <motion.section
       className={styles.sectionVideo}
-      initial={{ opacity: 0, y: 100 }}
-      animate={{ opacity: 1 , y: 0 }}
-      transition={{ duration: 0.7 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
     >
       <h1>Atraia mais pacientes para o seu consultório através das redes sociais</h1>
       <div className={styles.videoOnComputer}>
@@ -42,16 +47,15 @@ export default function Home() {
           allowFullScreen
         />
       </div>
-      <motion.a
-        href="https://sun.eduzz.com/779754?&utm_source=JOBZZ&utm_medium=Organico&utm_campaign=Link_Checkout"
-        target="_blank"
+      <motion.button
+        onClick={scrollToSectionSell}
         whileHover={{
           scale: [1, 1.1],
           transition: { duration: 0.5, loop: Infinity },
         }}
       >
         Quero assinar o plano
-      </motion.a>
+      </motion.button>
     </motion.section>
     <SectionAboutMe />
     <SectionHowItWorks />

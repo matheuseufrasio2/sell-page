@@ -3,7 +3,7 @@ import styles from './styles.module.scss';
 export function SectionSell() {
   return (
     <section className={styles.sectionContainer}>
-      <h1>Conheça nosso plano</h1>
+      <h1 id="compre-aqui">Conheça nosso plano</h1>
       <div className={styles.ourPlan}>
         <ul>
           <li>DE R$ 297 POR R$247/MÊS</li>
