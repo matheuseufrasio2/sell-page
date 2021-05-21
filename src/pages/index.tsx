@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import Head from 'next/head';
 import { Footer } from '../components/Footer';
 import { SectionAboutMe } from '../components/SectionAboutMe';
@@ -12,7 +13,12 @@ export default function Home() {
     <Head>
       <title>Social Media Pocket</title>
     </Head>
-    <section className={styles.sectionVideo}>
+    <motion.section
+      className={styles.sectionVideo}
+      initial={{ opacity: 0, y: 100 }}
+      animate={{ opacity: 1 , y: 0 }}
+      transition={{ duration: 0.7 }}
+    >
       <h1>Atraia mais pacientes para o seu consultório através das redes sociais</h1>
       <div className={styles.videoOnComputer}>
         <iframe 
@@ -39,8 +45,10 @@ export default function Home() {
       <a
         href="https://sun.eduzz.com/779754?&utm_source=JOBZZ&utm_medium=Organico&utm_campaign=Link_Checkout"
         target="_blank"
-      >Quero assinar o plano</a>
-    </section>
+      >
+        Quero assinar o plano
+      </a>
+    </motion.section>
     <SectionAboutMe />
     <SectionHowItWorks />
     <SectionSell />
