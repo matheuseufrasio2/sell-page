@@ -42,12 +42,16 @@ export default function Home() {
           allowFullScreen
         />
       </div>
-      <a
+      <motion.a
         href="https://sun.eduzz.com/779754?&utm_source=JOBZZ&utm_medium=Organico&utm_campaign=Link_Checkout"
         target="_blank"
+        whileHover={{
+          scale: [1, 1.1],
+          transition: { duration: 0.5, loop: Infinity },
+        }}
       >
         Quero assinar o plano
-      </a>
+      </motion.a>
     </motion.section>
     <SectionAboutMe />
     <SectionHowItWorks />
