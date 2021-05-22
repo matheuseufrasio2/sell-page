@@ -33,8 +33,7 @@
     transition: all 0.2s;
 
     &:hover {
-      background-color: transparent;
-      color: #18d94b;
+      filter: brightness(1.1);
     }
 
     @media(max-width: 768px) {
@@ -46,23 +45,48 @@
 
 .ourPlan {
   margin-top: 1rem;
-  padding: 2rem;
+  padding: 2rem 4rem;
   background-color: white;
   display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
-  list-style-position: inside;
   border-radius: 5px;
   box-shadow: 0 0 1em rgb(68, 66, 66);
+  max-width: 550px;
 
   @media(max-width: 768px) {
     width: 90%;
   }
 
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    margin-bottom: 2rem;
+
+    .oldPrice {
+      color: #c40000;
+      text-decoration: line-through;
+      font-size: 1.5rem;
+    }
+    .newPrice {
+      color: var(--blue-600);
+      font-size: 2.5rem;
+
+      span {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
   ul {
     li {
+      list-style: none;
       color: black;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
 
       @media(max-width: 768px) {
         font-size: 1rem;
@@ -71,6 +95,17 @@
       & + li {
         margin-top: 0.75rem;
       }
+
+      position: relative;
+
+      &::before{
+        position: absolute;
+        content: url('../../../public/images/check.png');
+        display: inline-block;
+        height: 1rem;
+        width: 1rem;
+        left: -1.5rem;
+     }
     }
   }
 }
